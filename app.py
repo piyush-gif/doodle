@@ -4,7 +4,7 @@ email_used = input("Enter your email")
 used_password = input("Enter your password:")
 username_used = input("Enter your username:")
 genre_site = input("Job, Game, Social, Mesc")
-
+site = input("Enter the site name:")
 
 saves = {
   "email": email_used,
@@ -12,3 +12,5 @@ saves = {
   "username": username_used,
   "genre": genre_site
 }
+
+print(saves)
