@@ -1,7 +1,0 @@
-# Ignore password storage
-passwords.json
-
-# Ignore PyInstaller build folders and files
-build/
-dist/
-*.spec
