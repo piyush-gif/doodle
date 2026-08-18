@@ -1,19 +1,13 @@
 .p{
-    background-color: aquamarine;
-    width: 500px;
-    height:  300px;
-    display:flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 200px;
 }
+
 .c1{
     background-color: lightpink;
-    width :20%;
-    height: 200px;
 }
+
 .c2{
-    background-color: bisque;
-    width:20%;
-    height: 200px;
+    background-color: lightblue;
 }
