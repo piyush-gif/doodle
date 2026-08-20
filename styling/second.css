@@ -1,0 +1,37 @@
+.div-container2{
+    padding: 150px;
+    background-color: rgb(250, 250, 241);
+
+    display: flex;
+    justify-content: center;
+}
+.text-container2{
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+}
+.text-container2 h1{
+    font-size: 50px;
+}
+.img2{
+    width: 450px;
+    height: 500px;
+}
+.button2{
+    color: white;
+    background-color: black;
+    width:120px;
+    height: 40px;
+    font-weight: bold;
+}
+.span2{
+    padding-bottom: 30px;
+}
+.mid-h1 h1{
+    font-size: 60px;
+}
+.mid-h1{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 250, 241);
+}

@@ -1,0 +1,54 @@
+.div-container3{
+    width: 100%;
+    background-color: rgb(250, 249, 237);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.plain-text3{
+    width: 60%;
+    height: 50px;
+    padding-bottom: 20px;
+}
+.container3{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.action{
+    background-color:  rgb(131, 189, 206);
+    display:flex;
+    height: 200px;
+    display:relative;
+    margin-bottom: 30px;
+}
+.text1{
+    padding: 40px;
+    width:50%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+}
+.img4{
+    left:0;
+    top:0;
+    position:absolute;
+    width: 60px;
+    height: 100%;
+}
+.img3{
+    position: relative;
+    padding-right: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.text2{
+    padding: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-around;
+
+}
