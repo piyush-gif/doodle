@@ -1,13 +1,22 @@
 .p{
-    display:grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 20px;
+    justify-content: center;
 }
 
 .c1{
+    grid-column: span 2;
+    background-color: lightblue;
+}
+.c2{
+    grid-row: span 2;
+    background-color: lightcyan;
+}
+.c3{
     background-color: lightpink;
 }
-
-.c2{
-    background-color: lightblue;
+.c4{
+    background-color: lightgreen;
 }
