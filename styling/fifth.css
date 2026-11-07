@@ -9,7 +9,6 @@
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 15px 300px;
     gap: 30px;
-    justify-content: center;
     align-content: center;
 }
 .con1{
