@@ -15,20 +15,38 @@
 
 // console.log(nums);
 
-let nums = [1, 1, 0, 1, 0, 1, 1];
-let store = 0;
-let compare = 0;
-let myMap = new Map();
+// let nums = [1, 1, 0, 1, 0, 1, 1];
+// let store = 0;
+// let compare = 0;
+
+// for (let i = 0; i < nums.length; i++) {
+//   if (nums[i] == 1) {
+//     store++;
+//     if (compare <= store) {
+//       compare = store;
+//     }
+//   } else {
+//     store = 0;
+//   }
+// }
+
+// console.log(compare);
+
+// ARRAY 2
+
+let nums = [1, 2, 2, 4]; // = 9
+// [1, 2, 3, 4] = 10
+let first = 0;
+let second = 0;
 
 for (let i = 0; i < nums.length; i++) {
-  if (nums[i] == 1) {
-    store++;
-  }
-  if (nums[i] == 0 || i === nums.length - 1) {
-    if (compare <= store) {
-      compare = store;
-    }
-    store = 0;
+  first += nums[i];
+  second += i + 1;
+}
+let final = Math.abs(first - second);
+for (let i = 0; i < nums.length; i++) {
+  if (nums[i] !== i + 1) {
+    nums[i] += final;
   }
 }
-console.log(compare);
+console.log(nums);
