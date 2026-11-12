@@ -34,8 +34,7 @@
 
 // ARRAY 2
 
-let nums = [1, 2, 2, 4]; // = 9
-// [1, 2, 3, 4] = 10
+let nums = [1, 1]; // [1, 1]
 let first = 0;
 let second = 0;
 
@@ -44,9 +43,14 @@ for (let i = 0; i < nums.length; i++) {
   second += i + 1;
 }
 let final = Math.abs(first - second);
-for (let i = 0; i < nums.length; i++) {
-  if (nums[i] !== i + 1) {
-    nums[i] += final;
+let pos1 = 0;
+let pos2 = 0;
+for (let i = 0; i < nums.length - 1; i++) {
+  for (let j = 1; j < nums.length; j++) {
+    if (nums[i] === nums[j]) {
+      pos1 = i;
+      pos2 = j;
+    }
   }
 }
-console.log(nums);
+console.log(nums[pos1], nums[pos1] + final);
