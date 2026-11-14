@@ -34,23 +34,22 @@
 
 // ARRAY 2
 
-let nums = [1, 1]; // [1, 1]
-let first = 0;
-let second = 0;
-
-for (let i = 0; i < nums.length; i++) {
-  first += nums[i];
-  second += i + 1;
-}
-let final = Math.abs(first - second);
-let pos1 = 0;
-let pos2 = 0;
+let nums = [1, 2, 2, 4]; // [1, 1] [2, 2] [1, 2, 2, 4]
+let tbc = 0;
+let dup = 0;
 for (let i = 0; i < nums.length - 1; i++) {
-  for (let j = 1; j < nums.length; j++) {
+  for (let j = i + 1; j < nums.length; j++) {
     if (nums[i] === nums[j]) {
-      pos1 = i;
-      pos2 = j;
+      if (nums[i] === i + 1) {
+        tbc = nums[j] + 1; // 2  = 2
+        dup = nums[i]; // 2nd 2 = 3
+      } else {
+        tbc = nums[i] - 1;
+        dup = nums[j];
+      }
+      break;
     }
   }
 }
-console.log(nums[pos1], nums[pos1] + final);
+
+console.log(dup, tbc);
