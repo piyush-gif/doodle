@@ -44,18 +44,13 @@ for (let i = 0; i < n; i++) {
   let num = nums[i];
   actualSum += num;
 
-  // Check if we've already seen this number using our object
   if (seen[num]) {
     duplicate = num;
   } else {
     seen[num] = true;
   }
 }
-
-// Mathematical sum of numbers from 1 to n
 let expectedSum = (n * (n + 1)) / 2;
-
-// The missing number is the expected sum minus the actual sum without the duplicate
 let missing = expectedSum - (actualSum - duplicate);
 
 return [duplicate, missing];
