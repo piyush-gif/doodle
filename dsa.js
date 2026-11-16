@@ -35,22 +35,27 @@
 // ARRAY 2
 
 let nums = [1, 1]; // [3, 2, 1]
-let total = nums[nums.length - 1];
-let expected = nums.length;
-let real = 0;
-let dup = 0;
+let n = nums.length;
+let seen = {};
+let duplicate = -1;
+let actualSum = 0;
 
-for (let i = 0; i < nums.length - 1; i++) {
-  total += nums[i];
-  expected += i + 1;
-  for (let j = i + 1; j < nums.length; j++) {
-    if (nums[i] === nums[j]) {
-      real = i;
-      dup = j;
-      break;
-    }
+for (let i = 0; i < n; i++) {
+  let num = nums[i];
+  actualSum += num;
+
+  // Check if we've already seen this number using our object
+  if (seen[num]) {
+    duplicate = num;
+  } else {
+    seen[num] = true;
   }
 }
-let variance = expected - total;
 
-console.log(nums[real], nums[dup] + variance);
+// Mathematical sum of numbers from 1 to n
+let expectedSum = (n * (n + 1)) / 2;
+
+// The missing number is the expected sum minus the actual sum without the duplicate
+let missing = expectedSum - (actualSum - duplicate);
+
+return [duplicate, missing];
