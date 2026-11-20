@@ -34,23 +34,37 @@
 
 // ARRAY 2
 
-let nums = [1, 1]; // [3, 2, 1]
-let n = nums.length;
-let seen = {};
-let duplicate = -1;
-let actualSum = 0;
+// let nums = [1, 1]; // [3, 2, 1]
+// let n = nums.length;
+// let seen = {};
+// let duplicate = -1;
+// let actualSum = 0;
 
-for (let i = 0; i < n; i++) {
-  let num = nums[i];
-  actualSum += num;
+// for (let i = 0; i < n; i++) {
+//   let num = nums[i];
+//   actualSum += num;
 
-  if (seen[num]) {
-    duplicate = num;
-  } else {
-    seen[num] = true;
+//   if (seen[num]) {
+//     duplicate = num;
+//   } else {
+//     seen[num] = true;
+//   }
+// }
+// let expectedSum = (n * (n + 1)) / 2;
+// let missing = expectedSum - (actualSum - duplicate);
+
+// return [duplicate, missing];
+
+let nums = [8, 1, 2, 2, 3];
+let compare = [];
+for (let i = 0; i < nums.length; i++) {
+  let count = 0;
+  for (let j = 0; j < nums.length; j++) {
+    if (i !== j && nums[i] > nums[j]) {
+      count++;
+    }
   }
+  compare.push(count);
 }
-let expectedSum = (n * (n + 1)) / 2;
-let missing = expectedSum - (actualSum - duplicate);
 
-return [duplicate, missing];
+console.log(compare);
